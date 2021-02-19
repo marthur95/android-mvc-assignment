@@ -50,51 +50,52 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:elevation="12dp"
-        android:padding="24dp"
-        android:background="@color/colorAccent"
-        android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"
+        android:elevation="12dp"
+        android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/taskList"
         tools:layout_editor_absoluteX="16dp">
 
         <EditText
-            android:backgroundTint="@color/colorPrimary"
-            android:textColor="@android:color/white"
             android:id="@+id/editTextTaskId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
             android:layout_marginRight="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:ems="10"
             android:hint="@string/insert_task_id"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white"
             app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            app:cornerRadius="24dp"
-            android:text="@string/delete_task"
-            android:textColor="@android:color/white"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:id="@+id/deleteBtn"
-            android:layout_marginRight="8dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/delete_task"
+            android:textColor="@android:color/white"
+            app:cornerRadius="24dp"
             app:layout_constraintBottom_toBottomOf="@+id/editTextTaskId"
             app:layout_constraintEnd_toStartOf="@+id/clearBtn" />
 
         <com.google.android.material.button.MaterialButton
-            app:cornerRadius="24dp"
+            android:id="@+id/clearBtn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:text="@string/done_task"
             android:textColor="@android:color/white"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:id="@+id/clearBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            app:cornerRadius="24dp"
             app:layout_constraintBottom_toBottomOf="@+id/editTextTaskId"
             app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
